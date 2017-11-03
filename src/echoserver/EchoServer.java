@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class EchoServer {
-	public static final int PORT_NUMBER = 6013;
+	public static final int PORT_NUMBER = 1337;
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		EchoServer server = new EchoServer();
@@ -22,8 +22,10 @@ public class EchoServer {
 			OutputStream outputStream = socket.getOutputStream();
 			int b;
 			while ((b = inputStream.read()) != -1) {
+				System.out.println(b);
 				outputStream.write(b);
 			}
 		}
+
 	}
 }
