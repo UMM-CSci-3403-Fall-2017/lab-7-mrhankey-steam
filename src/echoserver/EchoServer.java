@@ -22,10 +22,15 @@ public class EchoServer {
 			OutputStream outputStream = socket.getOutputStream();
 			int b;
 			while ((b = inputStream.read()) != -1) {
-				System.out.println(b);
-				outputStream.write(b);
+				System.out.println((byte)b);
+				outputStream.write((byte)b);
 			}
+			System.out.flush();
+			outputStream.flush();
+			socket.shutdownOutput();
 		}
+
+
 
 	}
 }
