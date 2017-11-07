@@ -1,0 +1,1 @@
+Our findings for the run times for the single-threaded call, vs approaches with varying numbers of threads yields that the time increments linearly with the amount of threads used. When it comes to using increasingly large files, the time also corresponds with file size. 
